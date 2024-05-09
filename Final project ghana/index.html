@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Ghana - Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <img src="ghanaflag.png" alt="Ghana Flag" width="40" height="40">
+            Explore Ghana
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Ghana</a></li>
+                <li><a href="travel.html"><i class="fas fa-map-marked-alt"></i> Travel Guide</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner with Ghana Flag as Background -->
+    <div class="main-banner" style="background-image: url('ghanaflag.png'); background-size: cover; background-position: center;">
+        <h1>Welcome to Ghana</h1>
+        <p>Discover the beauty, culture, and history of this amazing country.</p>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Top Attractions</h2>
+        <ul>
+            <li>Elmina Castle</li>
+            <li>Kwame Nkrumah Mausoleum</li>
+            <li>Wli Waterfalls</li>
+        </ul>
+
+        <!-- Displaying a Landscape Image -->
+        <img src="ghanalandscape.jpeg" alt="Beautiful Ghanaian Landscape" width="600" height="400">
+
+        <!-- Animation: Random Travel Quotes -->
+        <h2>Travel Quote</h2>
+        <div id="quote-box">"Traveling – it leaves you speechless, then turns you into a storyteller." - Ibn Battuta</div>
+    </main>
+
+    <!-- Footer with External Links -->
+    <footer>
+        <p>© 2024 Explore Ghana. All rights reserved.</p>
+        <p>Resources: 
+            <a href="https://visitghana.com" target="_blank">Visit Ghana</a> |
+            <a href="https://touringhana.com" target="_blank">Touring Ghana</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        const quotes = [
+            `"The world is a book, and those who do not travel read only one page." - Saint Augustine`,
+            `"Traveling – it leaves you speechless, then turns you into a storyteller." - Ibn Battuta`,
+            `"Adventure is worthwhile." - Aesop`
+        ];
+
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const quoteBox = document.getElementById("quote-box");
+            quoteBox.innerHTML = getRandomQuote();
+        });
+    </script>
+</body>
+</html>
